@@ -3,7 +3,7 @@
 from plone import api
 from plone.app.testing import setRoles, TEST_USER_ID
 from sinar.miscbehavior.testing import (
-    SINAR_MISCBEHAVIOR_INTEGRATION_TESTING  # noqa: E501,,
+    SINAR_MISCBEHAVIOR_INTEGRATION_TESTING  # noqa: E501,,,
 )
 
 import unittest

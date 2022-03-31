@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="sinar.miscbehavior">
+
+    <!-- -*- extra stuff goes here -*- -->
+
+    <utility
+        component=".develompent_themes.DevelompentThemesFactory"
+        name="sinar.miscbehavior.DevelompentThemes"
+    />
+
+
+</configure>

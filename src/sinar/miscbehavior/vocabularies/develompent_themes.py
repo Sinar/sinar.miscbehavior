@@ -24,8 +24,22 @@ class DevelompentThemes(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u'sony-a7r-iii', _(u'Sony Aplha 7R III')),
-            VocabItem(u'canon-5d-iv', _(u'Canon 5D IV')),
+            VocabItem(u'agriculture', _(u'Agriculture')),
+            VocabItem(u'childrights', _(u'Child Rights')),
+            VocabItem(u'crime', _(u'Crime')),
+            VocabItem(u'environment', _(u'Environment')),
+            VocabItem(u'economy', _(u'Economy')),
+            VocabItem(u'education', _(u'Education')),
+            VocabItem(u'energy', _(u'Energy')),
+            VocabItem(u'health', _(u'Health')),
+            VocabItem(u'humanrights', _(u'Human Rights')),
+            VocabItem(u'indigenous', _(u'Indigenous Affairs')),
+            VocabItem(u'labourrights', _(u'Labour Rights')),
+            VocabItem(u'migrants', _(u'Migrants and Refugees')),
+            VocabItem(u'procurement', _(u'Procurement and Contracts')),
+            VocabItem(u'religion', _(u'Religious Affairs')),
+            VocabItem(u'water', _(u'Water and Santitation')),
+            VocabItem(u'women', _(u'Women and Gender')),
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

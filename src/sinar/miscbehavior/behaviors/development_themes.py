@@ -7,23 +7,28 @@ from Products.CMFPlone.utils import safe_hasattr
 from sinar.miscbehavior import _
 from zope.component import adapter
 from zope.interface import implementer, Interface, provider
+from plone.app.z3cform.widget import RelatedItemsFieldWidget, SelectFieldWidget
+from plone.autoform import directives
+from plone.supermodel.directives import primary
+from Products.CMFPlone.utils import safe_hasattr
 
 
 class IDevelopmentThemesMarker(Interface):
     pass
-
 
 @provider(IFormFieldProvider)
 class IDevelopmentThemes(model.Schema):
     """
     """
 
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
+    directives.widget(development_themes=SelectFieldWidget)
+    development_themes = schema.List(
+        title=_(u'Development Themes'),
+        description=_(u'General development theme or category.'),
+        value_type = schema.Choice(
+            vocabulary='sinar.miscbehavior.DevelompentThemes',),
         required=False,
     )
-
 
 @implementer(IDevelopmentThemes)
 @adapter(IDevelopmentThemesMarker)
@@ -32,11 +37,11 @@ class DevelopmentThemes(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, 'project'):
-            return self.context.project
+    def development_themes(self):
+        if safe_hasattr(self.context, 'development_themes'):
+            return self.context.development_themes
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @development_themes.setter
+    def development_themes(self, value):
+        self.context.development_themes = value

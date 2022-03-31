@@ -16,7 +16,7 @@ class VocabItem(object):
 
 
 @implementer(IVocabularyFactory)
-class DevelompentThemes(object):
+class DevelopmentThemes(object):
     """
     """
 
@@ -62,4 +62,4 @@ class DevelompentThemes(object):
         return SimpleVocabulary(terms)
 
 
-DevelompentThemesFactory = DevelompentThemes()
+DevelopmentThemesFactory = DevelopmentThemes()

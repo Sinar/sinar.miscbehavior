@@ -26,7 +26,7 @@ class IDevelopmentThemes(model.Schema):
         title=_(u'Development Themes'),
         description=_(u'General development theme or category.'),
         value_type = schema.Choice(
-            vocabulary='sinar.miscbehavior.DevelompentThemes',),
+            vocabulary='sinar.miscbehavior.DevelopmentThemes',),
         required=False,
     )
 

@@ -5,8 +5,8 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <utility
-        component=".develompent_themes.DevelompentThemesFactory"
-        name="sinar.miscbehavior.DevelompentThemes"
+        component=".development_themes.DevelopmentThemesFactory"
+        name="sinar.miscbehavior.DevelopmentThemes"
     />
 
 

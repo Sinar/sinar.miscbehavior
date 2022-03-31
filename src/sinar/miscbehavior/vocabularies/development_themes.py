@@ -24,6 +24,7 @@ class DevelopmentThemes(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
+            VocabItem(u'accountability', _(u'Accountability and Transparency')),
             VocabItem(u'agriculture', _(u'Agriculture')),
             VocabItem(u'childrights', _(u'Child Rights')),
             VocabItem(u'crime', _(u'Crime')),
@@ -36,6 +37,7 @@ class DevelopmentThemes(object):
             VocabItem(u'indigenous', _(u'Indigenous Affairs')),
             VocabItem(u'labourrights', _(u'Labour Rights')),
             VocabItem(u'migrants', _(u'Migrants and Refugees')),
+            VocabItem(u'legislative', _(u'Legislative Assemblies and Parliament')),
             VocabItem(u'procurement', _(u'Procurement and Contracts')),
             VocabItem(u'religion', _(u'Religious Affairs')),
             VocabItem(u'water', _(u'Water and Santitation')),

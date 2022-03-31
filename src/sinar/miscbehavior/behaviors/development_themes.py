@@ -30,6 +30,11 @@ class IDevelopmentThemes(model.Schema):
         required=False,
     )
 
+    model.fieldset(
+        'categorization',
+        fields=['development_themes']
+    )
+
 @implementer(IDevelopmentThemes)
 @adapter(IDevelopmentThemesMarker)
 class DevelopmentThemes(object):

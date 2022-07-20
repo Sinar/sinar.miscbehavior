@@ -2,7 +2,7 @@
 
 from plone import schema
 from plone.app.z3cform.widget import SelectFieldWidget
-from plone.autoform import directive
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from Products.CMFPlone.utils import safe_hasattr
@@ -20,12 +20,13 @@ class ISDGGoals(model.Schema):
     """
     """
 
+    directives.widget(SDG_goals=SelectFieldWidget)
     SDG_goals = schema.List(
         title=_(u'SDG Goals'),
         description=_(u'SDG Goals applicable to content'),
         required=False,
         value_type=schema.Choice(
-            vocabulary="sinar.miscbehavior.vocabulary.sdg",
+            vocabulary="sinar.miscbehavior.SDGGoals",
         ),
     )
 

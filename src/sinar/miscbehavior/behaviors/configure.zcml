@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="sinar.miscbehavior.s_d_g_goals"
+        title="SDGGoals"
+        description="Selection of 17 SDG Goals"
+        provides=".s_d_g_goals.ISDGGoals"
+        factory=".s_d_g_goals.SDGGoals"
+        marker=".s_d_g_goals.ISDGGoalsMarker"
+        />
+
+
+    <plone:behavior
         name="sinar.miscbehavior.development_themes"
         title="DevelopmentThemes"
         description="Development Themes and Categories"

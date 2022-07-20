@@ -5,6 +5,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <utility
+        component=".s_d_g_goals.SDGGoalsFactory"
+        name="sinar.miscbehavior.SDGGoals"
+    />
+
+
+    <utility
         component=".development_themes.DevelopmentThemesFactory"
         name="sinar.miscbehavior.DevelopmentThemes"
     />

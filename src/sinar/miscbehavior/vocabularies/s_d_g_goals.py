@@ -24,23 +24,8 @@ class SDGGoals(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u'No poverty', _(u'No poverty')),
-            VocabItem(u'Zero hunger', _(u'Zero hunger')),
-	VocabItem(u'Good health and well-being', _(u'Good Health and well-being')),
-	VocabItem(u'Quality education', _(u'Quality education')),
-	VocabItem(u'Gender Equality', _(u'Gender Equality')),
-	VocabItem(u'Clean Water and Sanitation', _(u'Clean Water and Sanitation')),
-	VocabItem(u'Affordable and Clean Energy', _(u'Affordable and Clean Energy')),
-	VocabItem(u'Decent Work and Economic Growth', _(u'Decent Work and Economic Growth')),
-	VocabItem(u'Industry,Innovation and Infrastructure', _(u'Industry,Innovation and Infrastructure')),
-	VocabItem(u'Reduced Inequalities', _(u'Reduced Inequalities')),
-	VocabItem(u'Sustainable Cities and Communities', _(u'Sustainable Cities and Communities')),
-	VocabItem(u'Responsible Consumption and Production', _(u'Responsible Consumption and Production')),
-	VocabItem(u'Climate Action', _(u'Climate Action')),
-	VocabItem(u'Life Below Water', _(u'Life Below Water')),
-	VocabItem(u'Life on Land', _(u'Life on Land')),
-	VocabItem(u'Peace, Justice and Strong Institution', _(u'Peace, Justice and Strong Institution')),_
-	VocabItem(u'Partnerships for the Goals', _(u'Partnerships for the Goals'))
+            VocabItem(u'sony-a7r-iii', _(u'Sony Aplha 7R III')),
+            VocabItem(u'canon-5d-iv', _(u'Canon 5D IV')),
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

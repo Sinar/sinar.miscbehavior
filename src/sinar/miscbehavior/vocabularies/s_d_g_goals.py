@@ -24,23 +24,23 @@ class SDGGoals(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u'No poverty', _(u'No poverty')),
-            VocabItem(u'Zero hunger', _(u'Zero hunger')),
-	VocabItem(u'Good health and well-being', _(u'Good Health and well-being')),
-	VocabItem(u'Quality education', _(u'Quality education')),
-	VocabItem(u'Gender Equality', _(u'Gender Equality')),
-	VocabItem(u'Clean Water and Sanitation', _(u'Clean Water and Sanitation')),
-	VocabItem(u'Affordable and Clean Energy', _(u'Affordable and Clean Energy')),
-	VocabItem(u'Decent Work and Economic Growth', _(u'Decent Work and Economic Growth')),
-	VocabItem(u'Industry,Innovation and Infrastructure', _(u'Industry,Innovation and Infrastructure')),
-	VocabItem(u'Reduced Inequalities', _(u'Reduced Inequalities')),
-	VocabItem(u'Sustainable Cities and Communities', _(u'Sustainable Cities and Communities')),
-	VocabItem(u'Responsible Consumption and Production', _(u'Responsible Consumption and Production')),
-	VocabItem(u'Climate Action', _(u'Climate Action')),
-	VocabItem(u'Life Below Water', _(u'Life Below Water')),
-	VocabItem(u'Life on Land', _(u'Life on Land')),
-	VocabItem(u'Peace, Justice and Strong Institution', _(u'Peace, Justice and Strong Institution')),_
-	VocabItem(u'Partnerships for the Goals', _(u'Partnerships for the Goals'))
+            VocabItem(u'sdg01', _(u'SDG 1 - No Poverty')),
+            VocabItem(u'sdg02', _(u'SDG 2 - Zero Hunger')),
+            VocabItem(u'sdg03', _(u'SDG 3 - Good Health and Well-Being')),
+            VocabItem(u'sdg04', _(u'SDG 4 - Quality Education')),
+            VocabItem(u'sdg05', _(u'SDG 5 - Gender Equality')),
+            VocabItem(u'sdg06', _(u'SDG 6 - Clean Water and Sanitation')),
+            VocabItem(u'sdg07', _(u'SDG 7 - Affordable and Clean Energy')),
+            VocabItem(u'sdg08', _(u'SDG 8 - Decent Work and Economic Growth')),
+            VocabItem(u'sdg09', _(u'SDG 9 - Industry, Innovation and Infrastructure')),
+            VocabItem(u'sdg10', _(u'SDG 10 - Reduced Inequalities')),
+            VocabItem(u'sdg11', _(u'SDG 11 - Sustainable Cities and Communities')),
+            VocabItem(u'sdg12', _(u'SDG 12 - Responsible Consumption and Production')),
+            VocabItem(u'sdg13', _(u'SDG 13 - Climate Action')),
+            VocabItem(u'sdg14', _(u'SDG 14 - Life Below Water')),
+            VocabItem(u'sdg15', _(u'SDG 15 - Life on Land')),
+            VocabItem(u'sdg16', _(u'SDG 16 - Peace, Justice and Strong Institutions')),
+            VocabItem(u'sdg17', _(u'SDG 17 - Partnerships for the Goals'))
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

@@ -38,11 +38,11 @@ class SDGGoals(object):
         self.context = context
 
     @property
-    def SGD_goals(self):
-        if safe_hasattr(self.context, 'SGD_goals'):
-            return self.context.SGD_goals
+    def SDG_goals(self):
+        if safe_hasattr(self.context, 'SDG_goals'):
+            return self.context.SDG_goals
         return None
 
-    @SGD_goals.setter
-    def SGD_goals(self, value):
-        self.context.SGD_goals = value
+    @SDG_goals.setter
+    def SDG_goals(self, value):
+        self.context.SDG_goals = value

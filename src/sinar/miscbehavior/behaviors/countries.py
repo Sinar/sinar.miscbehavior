@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from plone import schema
+from plone.supermodel.directives import fieldset
+from plone.app.z3cform.widget import SelectFieldWidget
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from Products.CMFPlone.utils import safe_hasattr
@@ -17,12 +20,24 @@ class ICountriesMarker(Interface):
 class ICountries(model.Schema):
     """
     """
-
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
+    directives.widget(countries=SelectFieldWidget)
+    countries = schema.List(
+        title=_(u'Countries'),
+        description=_(u'Countries applicable to this content type'),
         required=False,
+        value_type=schema.Choice(
+            vocabulary="collective.vocabularies.iso.countries",
+        ),
     )
+
+    # fieldset set the tabs on the edit form
+
+    fieldset(
+            'categorization',
+            fields=[
+                'countries',
+                ],
+            )
 
 
 @implementer(ICountries)
@@ -32,11 +47,11 @@ class Countries(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, 'project'):
-            return self.context.project
+    def countries(self):
+        if safe_hasattr(self.context, 'countries'):
+            return self.context.countries
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @countries.setter
+    def countries(self, value):
+        self.context.countries = value

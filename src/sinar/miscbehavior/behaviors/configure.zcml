@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="sinar.miscbehavior.countries"
+        title="Countries"
+        description="Search and categorize content by countries"
+        provides=".countries.ICountries"
+        factory=".countries.Countries"
+        marker=".countries.ICountriesMarker"
+        />
+
+
+    <plone:behavior
         name="sinar.miscbehavior.s_d_g_goals"
         title="SDGGoals"
         description="Selection of 17 SDG Goals"

@@ -5,6 +5,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <utility
+        component=".marginalized_communities_malaysia.MarginalizedCommunitiesMalaysiaFactory"
+        name="sinar.miscbehavior.MarginalizedCommunitiesMalaysia"
+    />
+
+
+    <utility
         component=".s_d_g_goals.SDGGoalsFactory"
         name="sinar.miscbehavior.SDGGoals"
     />

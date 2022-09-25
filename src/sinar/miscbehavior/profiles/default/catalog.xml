@@ -7,5 +7,8 @@
   <index name="SDG_goals" meta_type="KeywordIndex">
       <indexed_attr value="SDG_goals" />
   </index>
-  <column value="SDG_goals" />
+  <column value="countries" />
+  <index name="countries" meta_type="KeywordIndex">
+      <indexed_attr value="countries" />
+  </index>
 </object>

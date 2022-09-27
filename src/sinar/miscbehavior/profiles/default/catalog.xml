@@ -3,12 +3,13 @@
   <index name="development_themes" meta_type="KeywordIndex">
       <indexed_attr value="development_themes" />
   </index>
-  <column value="SDG_goals" />
+  <column value="development_themes" />
   <index name="SDG_goals" meta_type="KeywordIndex">
       <indexed_attr value="SDG_goals" />
   </index>
-  <column value="countries" />
+  <column value="SDG_goals" />
   <index name="countries" meta_type="KeywordIndex">
       <indexed_attr value="countries" />
   </index>
+  <column value="countries" />
 </object>

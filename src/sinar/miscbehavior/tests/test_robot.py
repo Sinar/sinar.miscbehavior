@@ -2,7 +2,7 @@
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
 from sinar.miscbehavior.testing import (
-    SINAR_MISCBEHAVIOR_ACCEPTANCE_TESTING  # noqa: E501,,,,,,,,
+    SINAR_MISCBEHAVIOR_ACCEPTANCE_TESTING  # noqa: E501,,,,,,,,,,
 )
 
 import os

@@ -24,6 +24,13 @@ class IDissemination(model.Schema):
         required=False,
     )
 
+    # dissemination_marker
+    dissemination = schema.Bool(
+        title=_(u'Dissemination'),
+        description=_(u'Mark as dissemination for project'),
+        required=False,
+    )
+
 
 @implementer(IDissemination)
 @adapter(IDisseminationMarker)
@@ -40,3 +47,4 @@ class Dissemination(object):
     @project.setter
     def project(self, value):
         self.context.project = value
+

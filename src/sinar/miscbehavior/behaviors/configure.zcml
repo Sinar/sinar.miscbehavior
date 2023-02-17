@@ -20,16 +20,6 @@
 
 
     <plone:behavior
-        name="sinar.miscbehavior.dissemination"
-        title="Dissemination"
-        description="Marks an article, activity or resource as a part of project dissemination/advocacy"
-        provides=".dissemination.IDissemination"
-        factory=".dissemination.Dissemination"
-        marker=".dissemination.IDisseminationMarker"
-        />
-
-
-    <plone:behavior
         name="sinar.miscbehavior.marginalized_communities_malaysia"
         title="MarginalizedCommunitiesMalaysia"
         description="Selection of marginalizedccommunities in Malaysia"

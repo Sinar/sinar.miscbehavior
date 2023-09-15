@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="sinar.miscbehavior.assessment"
+        title="Assessment"
+        description="A private rich text field to add additional assessment notes for MEL and reporting"
+        provides=".assessment.IAssessment"
+        factory=".assessment.Assessment"
+        marker=".assessment.IAssessmentMarker"
+        />
+
+
+    <plone:behavior
         name="sinar.miscbehavior.dissemination"
         title="Dissemination"
         description="Marks an article, activity or resource as a part of project dissemination/advocacy"

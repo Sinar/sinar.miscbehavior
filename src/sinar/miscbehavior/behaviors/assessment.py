@@ -34,17 +34,22 @@ class IAssessment(model.Schema):
                  <p class="callout">
                  Describe any partnerships with other organizations,
                  researchers and community leaders that have been
-                 developed during the project cycle and the usefulness
-                 of these in achieving the project's objectives.
-                 <br />
-                 Describe the involvement of project beneficiaries,
-                 during all phases of project implementation.
-                 <br />
-                 Describe any gender, ethnic and generation gap issues that have impacted positively or negatively your project implementation.
-                 <br />
-                 Please take the time to reflect about activities that you struggle to implement during the period reported, along with processes and methods originally planned that might need adjustment to achieve your project objectives.
+                 developed and the usefulness
+                 of these in achieving objectives.
                  </p>
-                 <p>
+                 <p>notes ...</p>
+                 <p class="callout">
+                 Describe the involvement of beneficiaries,
+                 during all phases of implementation.
+                 </p>
+                 <p>notes ... </p>
+                 <p class="callout">
+                 Describe any gender, ethnic and generation gap issues
+                 that have impacted implementation, positively or
+                 negatively.</p>
+                 <p>notes ... </p>
+                 <p class="callout">
+                 Please take the time to reflect about activities that you struggle to implement, along with processes and methods originally planned that might need adjustment to achieve objectives.
                  </p>
                  '''),
         required=False,

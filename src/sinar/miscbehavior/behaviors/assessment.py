@@ -2,7 +2,7 @@
 
 from sinar.miscbehavior import _
 from plone import schema
-from collective import dexteritytextindexer
+from plone.app.dexterity import textindexer
 from plone.app.textfield import RichText
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
@@ -23,7 +23,7 @@ class IAssessment(model.Schema):
     """
     """
 
-    dexteritytextindexer.searchable('assessment_notes')
+    textindexer.searchable('assessment_notes')
     directives.read_permission(assessment_notes='cmf.ModifyPortalContent')
     directives.write_permission(assessment_notes='cmf.ModifyPortalContent')
     assessment_notes = RichText(

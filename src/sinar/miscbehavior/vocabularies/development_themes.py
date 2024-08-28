@@ -2,7 +2,6 @@
 
 from plone.dexterity.interfaces import IDexterityContent
 # from plone import api
-from sinar.miscbehavior import _
 from zope.globalrequest import getRequest
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
@@ -24,24 +23,28 @@ class DevelopmentThemes(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u'accountability', _(u'Accountability and Transparency')),
-            VocabItem(u'agriculture', _(u'Agriculture')),
-            VocabItem(u'childrights', _(u'Child Rights')),
-            VocabItem(u'crime', _(u'Crime')),
-            VocabItem(u'environment', _(u'Environment')),
-            VocabItem(u'economy', _(u'Economy')),
-            VocabItem(u'education', _(u'Education')),
-            VocabItem(u'energy', _(u'Energy')),
-            VocabItem(u'health', _(u'Health')),
-            VocabItem(u'humanrights', _(u'Human Rights')),
-            VocabItem(u'indigenous', _(u'Indigenous Affairs')),
-            VocabItem(u'labourrights', _(u'Labour Rights')),
-            VocabItem(u'migrants', _(u'Migrants and Refugees')),
-            VocabItem(u'legislative', _(u'Legislative Assemblies and Parliament')),
-            VocabItem(u'procurement', _(u'Procurement and Contracts')),
-            VocabItem(u'religion', _(u'Religious Affairs')),
-            VocabItem(u'water', _(u'Water and Santitation')),
-            VocabItem(u'women', _(u'Women and Gender')),
+            VocabItem('accessibility', 'Accessibility'),
+            VocabItem('accountability', 'Accountability and Transparency'),
+            VocabItem('agriculture', 'Agriculture'),
+            VocabItem('childrights', 'Child Rights'),
+            VocabItem('crime', 'Crime'),
+            VocabItem('environment', 'Environment'),
+            VocabItem('economy', 'Economy'),
+            VocabItem('education', 'Education'),
+            VocabItem('energy', 'Energy'),
+            VocabItem('health', 'Health'),
+            VocabItem('humanrights', 'Human Rights'),
+            VocabItem('indigenous', 'Indigenous Affairs'),
+            VocabItem('infrastructure', 'I'),
+            VocabItem('labourrights', 'Labour Rights'),
+            VocabItem('migrants', 'Migrants and Refugees'),
+            VocabItem('legislative', 'Legislative Assemblies and Parliament'),
+            VocabItem('procurement', 'Procurement and Contracts'),
+            VocabItem('religion', 'Religious Affairs'),
+            VocabItem('transportation', 'Transportation'),
+            VocabItem('water', 'Water and Santitation'),
+            VocabItem('women', 'Women and Gender'),
+            VocabItem('accessibility', 'Accessibility'),
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

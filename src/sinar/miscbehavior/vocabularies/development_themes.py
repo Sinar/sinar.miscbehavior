@@ -44,7 +44,6 @@ class DevelopmentThemes(object):
             VocabItem('transportation', 'Transportation'),
             VocabItem('water', 'Water and Santitation'),
             VocabItem('women', 'Women and Gender'),
-            VocabItem('accessibility', 'Accessibility'),
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

@@ -35,7 +35,7 @@ class DevelopmentThemes(object):
             VocabItem('health', 'Health'),
             VocabItem('humanrights', 'Human Rights'),
             VocabItem('indigenous', 'Indigenous Affairs'),
-            VocabItem('infrastructure', 'I'),
+            VocabItem('infrastructure', 'Infrastructure'),
             VocabItem('labourrights', 'Labour Rights'),
             VocabItem('migrants', 'Migrants and Refugees'),
             VocabItem('legislative', 'Legislative Assemblies and Parliament'),

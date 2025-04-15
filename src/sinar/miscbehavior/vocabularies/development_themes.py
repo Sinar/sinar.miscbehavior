@@ -30,7 +30,6 @@ class DevelopmentThemes(object):
             VocabItem('childrights', 'Child Rights'),
             VocabItem('crime', 'Crime'),
             VocabItem('digitaldev', 'Digital Development and Innovation'),
-            VocabItem('digitalrights', 'Digital Rights and Data Justice'),
             VocabItem('environment', 'Environment'),
             VocabItem('economy', 'Economy'),
             VocabItem('education', 'Education'),
@@ -52,7 +51,6 @@ class DevelopmentThemes(object):
             VocabItem('water', 'Water and Santitation'),
             VocabItem('women', 'Women and Gender'),
             VocabItem('youth', 'Youth Development'),
-
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

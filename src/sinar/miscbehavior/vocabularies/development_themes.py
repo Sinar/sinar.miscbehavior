@@ -40,6 +40,7 @@ class DevelopmentThemes(object):
             VocabItem('indigenous', 'Indigenous Affairs'),
             VocabItem('infrastructure', 'Infrastructure'),
             VocabItem('labourrights', 'Labour Rights'),
+            VocabItem('mediadev', 'Media Development'),
             VocabItem('mel', 'Monitoring, Evaluation and Learning (MEL)'),
             VocabItem('migrants', 'Migrants and Refugees'),
             VocabItem('legislative', 'Legislative Assemblies and Parliament'),

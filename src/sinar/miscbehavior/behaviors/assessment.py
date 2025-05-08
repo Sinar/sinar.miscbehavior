@@ -10,6 +10,7 @@ from plone.app.textfield import RichText
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from plone.autoform import directives
+from plone.supermodel.directives import fieldset
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter
 from zope.interface import Interface
@@ -57,6 +58,13 @@ class IAssessment(model.Schema):
                  '''),
         required=False,
     )
+
+    # fieldset set the tabs on the edit form
+    fieldset('MEL',
+             label=_('MEL'),
+             fields=['assessment_notes'],
+             )
+
 
 @implementer(IAssessment)
 @adapter(IAssessmentMarker)

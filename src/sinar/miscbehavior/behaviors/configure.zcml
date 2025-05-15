@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="sinar.miscbehavior.website_url"
+        title="WebsiteUrl"
+        description="URL link used as default or prominent main link"
+        provides=".website_url.IWebsiteUrl"
+        factory=".website_url.WebsiteUrl"
+        marker=".website_url.IWebsiteUrlMarker"
+        />
+
+
+    <plone:behavior
         name="sinar.miscbehavior.assessment"
         title="Assessment"
         description="A private rich text field to add additional assessment notes for MEL and reporting"

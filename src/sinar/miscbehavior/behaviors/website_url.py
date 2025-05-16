@@ -20,9 +20,9 @@ class IWebsiteUrl(model.Schema):
     """
     """
 
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
+    website_url = schema.URI(
+        title=_('Website URL'),
+        description=_('Link to website or external content'),
         required=False,
     )
 
@@ -34,11 +34,11 @@ class WebsiteUrl(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, 'project'):
-            return self.context.project
+    def website_url(self):
+        if safe_hasattr(self.context, 'website_url'):
+            return self.context.website_url
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @website_url.setter
+    def website_url(self, value):
+        self.context.website_url = value

@@ -29,7 +29,7 @@ class IDigitalRights(model.Schema):
         Digital rights categorues applicable to the
         content.'''),
         value_type=schema.Choice(
-            vocabulary='sinar.miscbehavior.DigitalRightsCategories',),
+            vocabulary='sinar.miscbehavior.DigitalRights',),
         required=False,
     )
 

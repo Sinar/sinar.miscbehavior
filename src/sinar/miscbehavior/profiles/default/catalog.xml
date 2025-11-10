@@ -7,6 +7,10 @@
   <index name="SDG_goals" meta_type="KeywordIndex">
       <indexed_attr value="SDG_goals" />
   </index>
+  <index name="digital_rights_categories" meta_type="KeywordIndex">
+      <indexed_attr value="digital_rights_categories" />
+  </index>
+  <column value="digital_rights_categories" />
   <column value="SDG_goals" />
   <index name="countries" meta_type="KeywordIndex">
       <indexed_attr value="countries" />

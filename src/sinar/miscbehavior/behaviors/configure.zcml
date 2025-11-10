@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="sinar.miscbehavior.digital_rights"
+        title="DigitalRights"
+        description="Categories for digital rights and tech accountability"
+        provides=".digital_rights.IDigitalRights"
+        factory=".digital_rights.DigitalRights"
+        marker=".digital_rights.IDigitalRightsMarker"
+        />
+
+
+    <plone:behavior
         name="sinar.miscbehavior.website_url"
         title="WebsiteUrl"
         description="URL link used as default or prominent main link"

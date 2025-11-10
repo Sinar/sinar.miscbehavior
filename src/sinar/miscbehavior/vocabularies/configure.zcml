@@ -5,6 +5,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <utility
+        component=".digital_rights.DigitalRightsFactory"
+        name="sinar.miscbehavior.DigitalRights"
+    />
+
+
+    <utility
         component=".marginalized_communities_malaysia.MarginalizedCommunitiesMalaysiaFactory"
         name="sinar.miscbehavior.MarginalizedCommunitiesMalaysia"
     />

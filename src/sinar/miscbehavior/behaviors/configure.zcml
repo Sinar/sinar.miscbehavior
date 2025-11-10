@@ -38,17 +38,6 @@
         marker=".dissemination.IDisseminationMarker"
         />
 
-
-    <plone:behavior
-        name="sinar.miscbehavior.marginalized_communities_malaysia"
-        title="MarginalizedCommunitiesMalaysia"
-        description="Selection of marginalizedccommunities in Malaysia"
-        provides=".marginalized_communities_malaysia.IMarginalizedCommunitiesMalaysia"
-        factory=".marginalized_communities_malaysia.MarginalizedCommunitiesMalaysia"
-        marker=".marginalized_communities_malaysia.IMarginalizedCommunitiesMalaysiaMarker"
-        />
-
-
     <plone:behavior
         name="sinar.miscbehavior.countries"
         title="Countries"

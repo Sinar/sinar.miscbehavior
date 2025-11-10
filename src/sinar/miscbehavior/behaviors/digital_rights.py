@@ -9,6 +9,9 @@ from zope.component import adapter
 from zope.interface import Interface
 from zope.interface import implementer
 from zope.interface import provider
+from plone.app.z3cform.widget import RelatedItemsFieldWidget, SelectFieldWidget
+from plone.autoform import directives
+from plone.supermodel import model
 
 
 class IDigitalRightsMarker(Interface):
@@ -19,11 +22,20 @@ class IDigitalRightsMarker(Interface):
 class IDigitalRights(model.Schema):
     """
     """
-
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
+    directives.widget(digital_rights_categories=SelectFieldWidget)
+    digital_rights_categories = schema.List(
+        title=_('Digital Rights Categories'),
+        description=_('''
+        Digital rights categorues applicable to the
+        content.'''),
+        value_type=schema.Choice(
+            vocabulary='sinar.miscbehavior.DigitalRightsCategories',),
         required=False,
+    )
+
+    model.fieldset(
+        'categorization',
+        fields=['digital_rights_categories']
     )
 
 
@@ -34,11 +46,11 @@ class DigitalRights(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, 'project'):
-            return self.context.project
+    def digital_rights_categories(self):
+        if safe_hasattr(self.context, 'digital_rights_categories'):
+            return self.context.digital_rights_categories
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @digital_rights_categories.setter
+    def digital_rights_categories(self, value):
+        self.context.digital_rights_categories = value

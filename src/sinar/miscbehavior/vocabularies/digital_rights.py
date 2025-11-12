@@ -25,6 +25,7 @@ class DigitalRights(object):
             VocabItem('algorithms', 'Algorithmic Accountability'),
             VocabItem('cloud', 'Cloud Computing and Data Centres'),
             VocabItem('consumer', 'Consumer Safety and Protection'),
+            VocabItem('digitalsecurity', 'Digital Security'),
             VocabItem('ipr', 'Intellectual Property Rights'),
             VocabItem('ogv', 'Online Gender Violence'),
             VocabItem('opendata', 'Open Data'),

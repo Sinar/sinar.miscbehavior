@@ -23,6 +23,7 @@ class DigitalRights(object):
         items = [
             VocabItem('ai', 'Artificial Intelligence'),
             VocabItem('algorithms', 'Algorithmic Accountability'),
+            VocabItem('foe', "Censorship and Freedom of Expression"),
             VocabItem('cloud', 'Cloud Computing and Data Centres'),
             VocabItem('consumer', 'Consumer Safety and Protection'),
             VocabItem('digitalsecurity', 'Digital Security'),

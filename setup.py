@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='sinar.miscbehavior',
-    version='1.0a1',
+    version='1.0a2',
     description="Misc behaviors for Sinar civil society site content types",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

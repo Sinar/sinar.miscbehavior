@@ -1,61 +1,76 @@
 .. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+   If you want to learn more about documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
-
-.. image:: https://travis-ci.org/collective/sinar.miscbehavior.svg?branch=master
-    :target: https://travis-ci.org/collective/sinar.miscbehavior
-
-.. image:: https://coveralls.io/repos/github/collective/sinar.miscbehavior/badge.svg?branch=master
-    :target: https://coveralls.io/github/collective/sinar.miscbehavior?branch=master
-    :alt: Coveralls
 
 .. image:: https://img.shields.io/pypi/v/sinar.miscbehavior.svg
     :target: https://pypi.python.org/pypi/sinar.miscbehavior/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/status/sinar.miscbehavior.svg
-    :target: https://pypi.python.org/pypi/sinar.miscbehavior
-    :alt: Egg Status
-
-.. image:: https://img.shields.io/pypi/pyversions/sinar.miscbehavior.svg?style=plastic   :alt: Supported - Python Versions
+.. image:: https://img.shields.io/pypi/pyversions/sinar.miscbehavior.svg?style=plastic
+    :alt: Supported - Python Versions
 
 .. image:: https://img.shields.io/pypi/l/sinar.miscbehavior.svg
     :target: https://pypi.python.org/pypi/sinar.miscbehavior/
     :alt: License
 
 
-==================
+======================
 sinar.miscbehavior
-==================
+======================
 
-Tell me what your product does
+Misc behaviors for Sinar civil society site content types.
+
+This add-on provides reusable Dexterity behaviors and vocabularies for
+categorizing and assessing content related to civil society, development
+work, and digital rights.
 
 Features
 --------
 
-- Can be bullet points
+**Dexterity Behaviors:**
 
+- **Assessment** — Rich text field for MEL assessment notes, with guided
+  prompts for partnerships, beneficiary involvement, gender/ethnic issues,
+  and implementation reflections.
+- **Countries** — Multi-select list of ISO countries for geographic
+  categorization.
+- **Development Themes** — Multi-select from 27 development themes including
+  Accessibility, Agriculture, Education, Health, Human Rights, Peacebuilding,
+  Women and Gender, Youth Development, and more.
+- **Digital Rights** — Multi-select from 17 digital rights and tech
+  accountability categories including AI, Algorithmic Accountability,
+  Cybersecurity, Privacy and Surveillance, Open Data, and Internet
+  Governance.
+- **Dissemination** — Adds a project name text field and a boolean
+  dissemination marker to label content as project dissemination material.
+- **SDG Goals** — Multi-select from all 169 UN Sustainable Development Goal
+  targets across the 17 goals.
+- **Website URL** — URI field for linking to external websites or content.
 
-Examples
---------
+**Vocabularies:**
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+- **Development Themes** — 27 themes covering areas from agriculture and
+  health to legislative assemblies and procurement.
+- **Digital Rights** — 17 categories covering AI, cloud computing, consumer
+  safety, cybercrime, intellectual property, platform accountability, and
+  more.
+- **SDG Goals** — All 169 SDG targets with full descriptive text.
+- **Marginalized Communities Malaysia** — 9 categories including Orang Asal
+  (Sabah/Sarawak), refugees, stateless persons, persons with disabilities,
+  and others.
 
+**Catalog Indexes:**
 
-Documentation
--------------
+- ``development_themes`` — KeywordIndex
+- ``SDG_goals`` — KeywordIndex
+- ``digital_rights_categories`` — KeywordIndex
+- ``countries`` — KeywordIndex
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+**Query String Fields:**
 
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
+- ``countries`` — Filter by ISO country
+- ``SDG_goals`` — Filter by SDG target
+- ``digital_rights_categories`` — Filter by digital rights category
 
 Installation
 ------------
@@ -72,21 +87,16 @@ Install sinar.miscbehavior by adding it to your buildout::
 
 and then running ``bin/buildout``
 
-
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/sinar.miscbehavior/issues
-- Source Code: https://github.com/collective/sinar.miscbehavior
-- Documentation: https://docs.plone.org/foo/bar
-
+- Issue Tracker: https://github.com/Sinar/sinar.miscbehavior/issues
+- Source Code: https://github.com/Sinar/sinar.miscbehavior
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
-
 
 License
 -------

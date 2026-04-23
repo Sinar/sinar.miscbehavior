@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.interfaces import INonInstallable
-from Products.CMFPlone.Registry import registry
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 from zope.interface import implementer
 
 
@@ -21,10 +22,11 @@ def post_install(context):
 
 def uninstall(context):
     """Uninstall script"""
+    registry = getUtility(IRegistry)
     keys = (
         'plone.app.querystring.field.countries',
         'plone.app.querystring.field.SDG_goals',
         'plone.app.querystring.field.digital_rights_categories',
     )
     for key in keys:
-        registry.registry.records.pop(key, None)
+        registry.records.pop(key, None)

@@ -32,11 +32,10 @@ class ISDGGoals(model.Schema):
     )
 
     fieldset(
-            'categorization',
-            fields=[
-                'SDG_goals',
-                ],
-            )
+        'categorization',
+        fields=['SDG_goals'],
+    )
+
 
 @implementer(ISDGGoals)
 @adapter(ISDGGoalsMarker)

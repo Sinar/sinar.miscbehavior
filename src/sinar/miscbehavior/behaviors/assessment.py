@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 
 from sinar.miscbehavior import _
-from plone import schema
+
+
 try:
     from plone.app.dexterity import textindexer
 except ImportError:
     from collective import dexteritytextindexer as textindexer
+
 from plone.app.textfield import RichText
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
-from plone.autoform import directives
 from plone.supermodel.directives import fieldset
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter
-from zope.interface import Interface
-from zope.interface import implementer
-from zope.interface import provider
+from zope.interface import implementer, Interface, provider
 
 
 class IAssessmentMarker(Interface):
@@ -33,29 +33,38 @@ class IAssessment(model.Schema):
     assessment_notes = RichText(
         title=_('Assessment Notes'),
         description=_('''
+                    Notes related to the assessment of this project or
+                    activity.
                              '''),
         default=_('''
-                 <p class="callout">
-                 Describe any partnerships with other organizations,
-                 researchers and community leaders that have been
-                 developed and the usefulness
-                 of these in achieving objectives.
-                 </p>
-                 <p>notes ...</p>
-                 <p class="callout">
-                 Describe the involvement of beneficiaries,
-                 during all phases of implementation.
-                 </p>
-                 <p>notes ... </p>
-                 <p class="callout">
-                 Describe any gender, ethnic and generation gap issues
-                 that have impacted implementation, positively or
-                 negatively.</p>
-                 <p>notes ... </p>
-                 <p class="callout">
-                 Please take the time to reflect about activities that you struggle to implement, along with processes and methods originally planned that might need adjustment to achieve objectives.
-                 </p>
+## Improvement
+
+_How would you rate the results of this project,
+given the challenges mentioned in concept or project
+document?_
+
+No improvement, moderate or considerable
+improvement?
+
+## Reflections
+
+_Please write 1-3 paragraphs on your experience_
+
+- _What did you learn during process of
+  implementation?_
+
+- _What would partner about organisations facing
+  similar challenges?_
+
+## Misc
+
+_Any other comments?_
+
+
                  '''),
+        default_mime_type='text/x-web-markdown',
+        output_mime_type='text/html',
+        allowed_mime_types=('text/x-web-markdown', 'text/plain'),
         required=False,
     )
 

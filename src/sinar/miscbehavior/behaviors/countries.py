@@ -33,11 +33,9 @@ class ICountries(model.Schema):
     # fieldset set the tabs on the edit form
 
     fieldset(
-            'categorization',
-            fields=[
-                'countries',
-                ],
-            )
+        'categorization',
+        fields=['countries'],
+    )
 
 
 @implementer(ICountries)

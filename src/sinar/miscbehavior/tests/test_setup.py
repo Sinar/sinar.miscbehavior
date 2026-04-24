@@ -2,8 +2,8 @@
 """Setup tests for this package."""
 from plone import api
 from plone.app.testing import setRoles, TEST_USER_ID
-from sinar.miscbehavior.testing import (
-    SINAR_MISCBEHAVIOR_INTEGRATION_TESTING  # noqa: E501,,,,,,,,,,
+from sinar.miscbehavior.testing import (  # noqa: E501,,,,,,,,,,
+    SINAR_MISCBEHAVIOR_INTEGRATION_TESTING,
 )
 
 import unittest
@@ -35,9 +35,8 @@ class TestSetup(unittest.TestCase):
 
     def test_browserlayer(self):
         """Test that ISinarMiscbehaviorLayer is registered."""
-        from sinar.miscbehavior.interfaces import (
-            ISinarMiscbehaviorLayer)
         from plone.browserlayer import utils
+        from sinar.miscbehavior.interfaces import ISinarMiscbehaviorLayer
         self.assertIn(
             ISinarMiscbehaviorLayer,
             utils.registered_layers())
@@ -65,9 +64,8 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that ISinarMiscbehaviorLayer is removed."""
-        from sinar.miscbehavior.interfaces import \
-            ISinarMiscbehaviorLayer
         from plone.browserlayer import utils
+        from sinar.miscbehavior.interfaces import ISinarMiscbehaviorLayer
         self.assertNotIn(
             ISinarMiscbehaviorLayer,
             utils.registered_layers())

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
+from plone.app.testing import setRoles, TEST_USER_ID
+from plone.behavior.interfaces import IBehavior
 from sinar.miscbehavior.behaviors.digital_rights import IDigitalRightsMarker
 from sinar.miscbehavior.testing import SINAR_MISCBEHAVIOR_INTEGRATION_TESTING  # noqa
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
-from plone.behavior.interfaces import IBehavior
 from zope.component import getUtility
 
 import unittest

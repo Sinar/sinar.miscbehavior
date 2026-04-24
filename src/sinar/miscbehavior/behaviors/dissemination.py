@@ -47,4 +47,3 @@ class Dissemination(object):
     @project.setter
     def project(self, value):
         self.context.project = value
-

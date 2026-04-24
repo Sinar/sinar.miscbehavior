@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from plone import schema
-from plone.app.z3cform.widget import RelatedItemsFieldWidget, SelectFieldWidget
+from plone.app.z3cform.widget import SelectFieldWidget
 from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
-from plone.supermodel.directives import primary
+
 from Products.CMFPlone.utils import safe_hasattr
 from sinar.miscbehavior import _
 from zope.component import adapter
@@ -14,6 +14,7 @@ from zope.interface import implementer, Interface, provider
 
 class IDevelopmentThemesMarker(Interface):
     pass
+
 
 @provider(IFormFieldProvider)
 class IDevelopmentThemes(model.Schema):
@@ -24,7 +25,7 @@ class IDevelopmentThemes(model.Schema):
     development_themes = schema.List(
         title=_(u'Development Themes'),
         description=_(u'General development theme or category.'),
-        value_type = schema.Choice(
+        value_type=schema.Choice(
             vocabulary='sinar.miscbehavior.DevelopmentThemes',),
         required=False,
     )

@@ -23,10 +23,15 @@ def post_install(context):
 def uninstall(context):
     """Uninstall script"""
     registry = getUtility(IRegistry)
-    keys = (
+    prefixes = (
         'plone.app.querystring.field.countries',
         'plone.app.querystring.field.SDG_goals',
         'plone.app.querystring.field.digital_rights_categories',
     )
-    for key in keys:
-        registry.records.pop(key, None)
+    for prefix in prefixes:
+        # <records> elements store one entry per value key: "<prefix>.<key>".
+        # Delete everything under the prefix using a range scan — iterating
+        # the whole registry fails on sites with mixed str/int record keys.
+        for key in registry.records.keys(min=prefix, max=prefix + '\x7f'):
+            if key == prefix or key.startswith(prefix + '.'):
+                del registry.records[key]

@@ -30,7 +30,7 @@ class TestSetup(unittest.TestCase):
 
     def test_product_installed(self):
         """Test if sinar.miscbehavior is installed."""
-        self.assertTrue(self.installer.isProductInstalled(
+        self.assertTrue(self.installer.is_product_installed(
             'sinar.miscbehavior'))
 
     def test_browserlayer(self):
@@ -54,12 +54,12 @@ class TestUninstall(unittest.TestCase):
             self.installer = api.portal.get_tool('portal_quickinstaller')
         roles_before = api.user.get_roles(TEST_USER_ID)
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        self.installer.uninstallProducts(['sinar.miscbehavior'])
+        self.installer.uninstall_product('sinar.miscbehavior')
         setRoles(self.portal, TEST_USER_ID, roles_before)
 
     def test_product_uninstalled(self):
         """Test if sinar.miscbehavior is cleanly uninstalled."""
-        self.assertFalse(self.installer.isProductInstalled(
+        self.assertFalse(self.installer.is_product_installed(
             'sinar.miscbehavior'))
 
     def test_browserlayer_removed(self):
